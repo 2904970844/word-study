@@ -1,17 +1,26 @@
-// pages/chooseLib/chooseLib.js
+// pages/index/index.js
+const db = wx.cloud.database();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    bannerList:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    let page = this;
+    db.collection('homebanner').where({}).get({
+      success:res=>{
+        page.setData({bannerList:res.data});
+        console.info(page.data.bannerList)
+      }
+      
+    })
 
   },
 
