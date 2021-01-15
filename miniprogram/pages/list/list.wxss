@@ -1,1 +1,24 @@
 /* pages/list/list.wxss */
+page {
+  background-color: #FFF;
+}
+.page{
+  margin-top: 20rpx;
+  display: flex;
+  flex-direction: row;
+}
+.select{
+  width: 50%;
+  text-align: center;
+}
+.select view{
+  width: 30%;
+  height: 4rpx;
+  background: #ff9535;
+  margin: 0 auto;
+  margin-top: 20rpx;
+}
+.normal{
+  width: 50%;
+  text-align: center;
+}

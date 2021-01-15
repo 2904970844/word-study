@@ -29,18 +29,21 @@
   <view class="booknow" style="margin-top:35rpx">我的词书词单</view>
 </view>
 <view class="card" style="margin-top:40rpx;margin-bottom:80rpx">
-  <view class="content" style="margin:30rpx auto">
+  <view class="content" style="margin:0;padding-top:30rpx;padding-bottom:30rpx"  hover-class="mybook">
     <view class="image" style=""><image src="https://s3.ax1x.com/2021/01/14/sU5AOS.png" style="width:90rpx;height:100rpx"></image></view>
     <view class="nav">
       <view class="title">上传及同步词单</view>
+      <view style="color: rgb(148, 147, 147);">上传词单及同步有道词典..</view>
     </view>
+    <view class="icon">></view>
   </view>
   <view class="hr"></view>
-  <view class="content" style="margin:30rpx auto">
-    <view class="image" style=""><image src="https://s3.ax1x.com/2021/01/14/sU51yT.png" style="width:90rpx;height:100rpx"></image></view>
+  <view class="content" style="margin:0;padding-top:30rpx;padding-bottom:30rpx" hover-class="mybook">
+    <view class="image"><image src="https://s3.ax1x.com/2021/01/14/sU51yT.png" style="width:90rpx;height:100rpx"></image></view>
     <view class="nav">
       <view class="title">我的词书词单</view>
-      <view >我的词书词单</view>
+      <view style="color: rgb(148, 147, 147);">正在学习的词书此单在这..</view>
     </view>
+    <view class="icon">></view>
   </view>
 </view>

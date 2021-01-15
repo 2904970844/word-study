@@ -6,7 +6,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-    
+    current:0,
+    normalbook:[],
+    listbook:[]
   },
 
   /**
@@ -14,13 +16,27 @@ Page({
    */
   onLoad: function (options) {
     let page = this;
-    db.collection('homebanner').where({}).get({
+    db.collection('normalbook').where({}).get({
       success:res=>{
-        console.info(res);
+        page.setData({normalbook:page.data.normalbook.concat(res.data)});
+        console.info(page.data.normalbook);
       }
     })
   },
-
+  //点击词单或者词书界面
+  listbtn:function(e){
+    let id = e.currentTarget.id;
+    let page = this;
+    //如果是点击的当前界面则不跳转
+    if(page.data.current==id){
+      return;
+    }
+    page.setData({current:id});
+  },
+  //左右滑动页面
+  change:function(e){
+    this.setData({current:e.detail.current})
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

@@ -1,1 +1,29 @@
 <!--pages/list/list.wxml-->
+<view class="head">
+  <view class="page">
+    <view class="{{current==0?'select':'normal'}}" id="0" bindtap="listbtn">
+      词书
+      <view></view>
+    </view>
+    <view class="{{current==1?'select':'normal'}}" id="1" bindtap="listbtn">
+      词单
+      <view></view>
+    </view>
+  </view>
+  <view class="btn">
+  </view>
+</view>
+<swiper current="{{current}}" bindchange="change" style="height:1000px">
+  <swiper-item>
+    <block wx:for="{{normalbook}}">
+      <view class="content">
+        <view class="image" style="background-image: url('{{item.cover}}');background-size:100% 100%;width: 140rpx;height: 190rpx;">
+        </view>
+        <view class="title">{{item.title}}</view>
+        <view class="syno">单词量：{{item.wordCount}}</view>
+        <view class="syno">{{item.origin.desc}}：{{item.origin.originName}}</view>
+      </view>
+    </block>
+  </swiper-item>
+  <swiper-item>eee</swiper-item>
+</swiper>
